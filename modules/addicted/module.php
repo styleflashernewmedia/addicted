@@ -30,7 +30,7 @@
 // the dicts would have been perfect rdf. comment -in my view-
 // is a reification on the triplet.
 // by using the whole triplet as a id for the message, i avoid
-// concurrent changes 
+// concurrent changes
 
 
 $Module = array( 'name' => 'addicted' );
@@ -39,78 +39,21 @@ $ViewList = array();
 
 //---------------------------------
 // addicted/menu
-$ViewList['menu'] 			= array('script' => 'menu.php' );
+$ViewList['menu'] = array(
+    'script' => 'menu.php',
+    'default_navigation_part' => 'addicted'
+);
 
-//---------------------------------
-$ViewList['dictionaries'] 	= array('script' => 'dictionaries.php' );
-//
-// http input
-// ../addicted/dictionaries
-//
-// template vars
-// $params["dictionaries"] 	array of hashes("file","locale","name","country")
-// $params["error"],$params["feedback"]
+$ViewList['dictionaries'] = array(
+    'script' => 'dictionaries.php',
+    'default_navigation_part' => 'addicted'
+);
+$ViewList['contexts'] = array(
+    'script' => 'contexts.php',
+    'default_navigation_part' => 'addicted'
+);
 
-//---------------------------------
-$ViewList['contexts'] 		= array('script' => 'contexts.php' );
-//
-// http input
-// ../addicted/contexts
-//		?dictionary=share/translations/fre-FR/dictionary.ts
-//
-// template vars
-// $params["dictionary"]	hash ("file","locale","name","country")
-// $params["contexts"] 		array of hashes("name","summary")
-// $params["error"],$params["feedback"]
-
-//---------------------------------
-$ViewList['messages'] 		= array('script' => 'messages.php' );
-//
-// http input
-// ../addicted/messages
-//		?dictionary=share/translations/fre-FR/dictionary.ts
-//		&context=/content/attributes
-//
-// template vars
-// $params["dictionary"]	hash ("file","locale","name","country")
-// $params["context"]		hash("name","summary")
-// $params["messages"]  	array of hashes ("source","status","translation","comment")
-// $params["action"]
-// $params["error"],$params["feedback"]
-
-// in messages.php,
-// actions are received like
-
-// action=insert
-// msg-source=perhaps
-// msg-status=finished
-// msg-translation=mischien
-
-// or
-
-// action=update
-// messages[]=0,1,2,..
-//..
-// msg2-orgsource=perhaps
-// msg2-orgstatus=unfinished
-// msg2-orgtranslation=mischien
-// msg2-newsource=perhaps
-// msg2-newstatus=finished
-// msg2-newtranslation=misschien
-//..
-
-// or
-
-// action=delete
-// messages[]=0,1,2,..
-// todelete[]=2,3,..
-
-// msg2-orgsource=perhaps
-// msg2-orgstatus=unfinished
-// msg2-orgtranslation=mischien
-//..
-
-
-
-
-?>
+$ViewList['messages'] = array(
+    'script' => 'messages.php',
+    'default_navigation_part' => 'addicted'
+);

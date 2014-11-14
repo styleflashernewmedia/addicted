@@ -41,19 +41,26 @@ $ViewList = array();
 // addicted/menu
 $ViewList['menu'] = array(
     'script' => 'menu.php',
+    'functions' => array( 'linguist' ),
     'default_navigation_part' => 'addicted'
 );
 
 $ViewList['dictionaries'] = array(
     'script' => 'dictionaries.php',
+    'functions' => array( 'linguist' ),
     'default_navigation_part' => 'addicted'
 );
 $ViewList['contexts'] = array(
     'script' => 'contexts.php',
+    'functions' => array( 'linguist' ),
     'default_navigation_part' => 'addicted'
 );
 
 $ViewList['messages'] = array(
     'script' => 'messages.php',
+    'functions' => array( 'linguist' ),
     'default_navigation_part' => 'addicted'
 );
+
+$FunctionList = array();
+$FunctionList['linguist'] = array();

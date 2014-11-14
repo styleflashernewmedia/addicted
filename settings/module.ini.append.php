@@ -2,6 +2,7 @@
 /*
 [ModuleSettings]
 ExtensionRepositories[]=addicted
+ModuleList[]=addicted
 
 */
 ?>
